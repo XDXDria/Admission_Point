@@ -88,7 +88,6 @@ def get():
         else:
            i = float(i)
            nlis.append(i)
-    print nlis
 
     gpa = nlis[0]*1500
     thai = nlis[1]*15
