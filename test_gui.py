@@ -1,8 +1,6 @@
 from Tkinter import *
 import Tkinter
 import tkMessageBox
-
-
 master = Tkinter.Tk()
 master.title("ADMISSION")
 Label(master, text="Faculty Number").grid(row=0,column=0)
@@ -45,7 +43,7 @@ e17 = Entry(master).grid(row=8, column=3)
 
 
 def get():
-    lis= []
+    lis = []
     pass_faculty = lis.append(e0.get())
     thai = lis.append(e1.get())
     social = lis.append(e2.get())
@@ -134,9 +132,6 @@ def get():
         pat3 = nlis[13]*20
         ans = thai+social+math+science+physical+art+work+gpa+gat+pat2+pat3
     print 'Your admission point is '+str(ans)+' Points.'
-    tkMessageBox.showinfo( "Hello Python", str(ans))
 Button(master, text="Submit",command = get).grid(row=9,column=1)
 Button(master, text="Close",command=master.destroy).grid(row=9,column=2)
-
-#B.pack()
-master.mainloop( )
+mainloop( )
