@@ -19,6 +19,7 @@ Label(master, text="Pat4").grid(row=5,column=2)
 Label(master, text="Pat5").grid(row=6,column=2)
 Label(master, text="Pat6").grid(row=7,column=2)
 Label(master, text="Pat7").grid(row=8,column=2)
+Label(master, text="If do not have point in the box you have to add 0 or -").grid(row=9)
 
 e0 = Entry(master)
 e1 = Entry(master)
@@ -150,8 +151,8 @@ def get():
         pat3 = nlis[13]*20
         ans = thai+social+math+science+physical+art+work+gpa+gat+pat2+pat3
     print 'Your admission point is '+str(ans)+' Points.'
-Button(master, text="Submit",command = get).grid(row=9,column=1)
-Button(master, text="Close",command=master.destroy).grid(row=9,column=2)
+Button(master, text="Submit",command = get).grid(row=10,column=1)
+Button(master, text="Close",command=master.destroy).grid(row=10,column=2)
 
 mainloop( )
 
