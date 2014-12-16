@@ -296,6 +296,7 @@ def get():
         if ans >= 11939.35:
             print "PASS"
         else:
+            print "NOT PASS"
     elif pass_faculty == 2053:
         if ans >= 11702.6:
             print "PASS"
