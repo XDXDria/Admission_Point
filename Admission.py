@@ -1,6 +1,6 @@
 from Tkinter import *
-master = Tk()
 def main():
+    master = Tk()
     master.title("ADMISSION")
     Label(master, text="Faculty Number").grid(row=0,column=0)
     Label(master, text="Thai").grid(row=1,column=0)
@@ -21,43 +21,43 @@ def main():
     Label(master, text="Pat6").grid(row=7,column=2)
     Label(master, text="Pat7").grid(row=8,column=2)
     e0 = Entry(master)
-    e1 = Entry(master)
-    e2 = Entry(master)
-    e3 = Entry(master)
-    e4 = Entry(master)
-    e5 = Entry(master)
-    e6 = Entry(master)
-    e7 = Entry(master)
-    e8 = Entry(master)
-    e9 = Entry(master)
-    e10 = Entry(master)
-    e11 = Entry(master)
-    e12 = Entry(master)
-    e13 = Entry(master)
-    e14 = Entry(master)
-    e15 = Entry(master)
-    e16 = Entry(master)
-    e17 = Entry(master)
     e0.grid(row=0, column=1)
+    e1 = Entry(master)
     e1.grid(row=1, column=1)
+    e2 = Entry(master)
     e2.grid(row=2, column=1)
+    e3 = Entry(master)
     e3.grid(row=3, column=1)
+    e4 = Entry(master)
     e4.grid(row=4, column=1)
+    e5 = Entry(master)
     e5.grid(row=5, column=1)
+    e6 = Entry(master)
     e6.grid(row=6, column=1)
+    e7 = Entry(master)
     e7.grid(row=7, column=1)
+    e8 = Entry(master)
     e8.grid(row=8, column=1)
+    e9 = Entry(master)
     e9.grid(row=0, column=3)
+    e10 = Entry(master)
     e10.grid(row=1, column=3)
+    e11 = Entry(master)
     e11.grid(row=2, column=3)
+    e12 = Entry(master)
     e12.grid(row=3, column=3)
+    e13 = Entry(master)
     e13.grid(row=4, column=3)
+    e14 = Entry(master)
     e14.grid(row=5, column=3)
+    e15 = Entry(master)
     e15.grid(row=6, column=3)
+    e16 = Entry(master)
     e16.grid(row=7, column=3)
+    e17 = Entry(master)
     e17.grid(row=8, column=3)
     def get():
-        lis= []
+        lis = []
         pass_faculty = lis.append(e0.get())
         thai = lis.append(e1.get())
         social = lis.append(e2.get())
@@ -84,7 +84,6 @@ def main():
             else:
                i = float(i)
                nlis.append(i)
-
         gpa = nlis[9]*1500
         thai = nlis[1]*15
         social = nlis[2]*15
@@ -96,8 +95,10 @@ def main():
         work = nlis[8]*5
         ans = 0
         pare = ''
-        cherr = ["","Thai","Social","English","Math","Science","Physical","Art","Work","GPA","GAT","PAT1","PAT2","PAT3","PAT4","PAT5","PAT6","PAT7"]
         err = []
+        faculty = [2024,2025,2026,2027,2028,2029,2030,2031,2032,2033,2034,2035,2036,2037,2038,2039,2040,2041,2042,2043,2044,2045,2046,2047,
+                   2048,2049,2050,2051,2052,2053,2054,2055,2056,2057,2058,2059,2060,2061,2062,2063,2064,2065,2066,2067,2068,2069,2070,2071,
+                   2072,2073,2074,2075,2076]
         point = [19055.35, 17602.5, 15965.9, 17904.45, 18131.4, 17647.15, 15795.3,
                   16556.5, 18002.05, 17737.5, 16298.65, 16861.95, 17148.75, 16302.95,
                   17170.7, 16646.25, 18353.75, 17174.7, 17499.55, 16876.95, 19904.45,
@@ -106,7 +107,7 @@ def main():
                   13933.8, 11243.2, 13724.5, 13213.2, 12953.25, 14944.5, 13168.8,
                   13852.55, 14337.55, 17757.85, 15257.5, 15497.45, 15943.2, 10783.2,
                   11013.2, 9789.4, 11161.25, 10295.7]
-        for i in xrange(2,9):
+        for i in xrange(1,9):
             if nlis[i] < 0 or nlis[i] > 100:
                 err.append(i)
         for i in xrange(10,18):
@@ -114,7 +115,6 @@ def main():
                 err.append(i)
         if nlis[9] < 0 or nlis[9] > 4:
             err.append(9)
-            
         if  nlis[0] >= 2024 and nlis[0] <= 2042:
             gat = nlis[10]*15
             pat2 = nlis[12]*15
@@ -426,13 +426,11 @@ def main():
                     pare = "You are PASS! and different point is "+str(ans-point[52]) 
                 else:
                     pare = "You are NOT PASS and different point is "+str(abs(ans-point[52]))
-        faculty = [2024,2025,2026,2027,2028,2029,2030,2031,2032,2033,2034,2035,2036,2037,2038,2039,2040,2041,2042,2043,2044,2045,2046,2047,
-                   2048,2049,2050,2051,2052,2053,2054,2055,2056,2057,2058,2059,2060,2061,2062,2063,2064,2065,2066,2067,2068,2069,2070,2071,
-                   2072,2073,2074,2075,2076]
+       
         if  nlis[0] not in faculty:
             print "Invalid faculty number plese enter correct number"
         elif len(err) != 0:
-            print "you score range in is invalid "
+            print "You score range in is invalid "
         else:
             print 'Your admission point is '+str(ans)+' Points.'
             print pare
