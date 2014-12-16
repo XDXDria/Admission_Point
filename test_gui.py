@@ -1,7 +1,7 @@
 from Tkinter import *
-import Tkinter
-import tkMessageBox
-master = Tkinter.Tk()
+#import Tkinter
+#import tkMessageBox
+master = Tk()
 master.title("ADMISSION")
 Label(master, text="Faculty Number").grid(row=0,column=0)
 Label(master, text="Thai").grid(row=1,column=0)
