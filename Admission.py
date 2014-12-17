@@ -434,7 +434,7 @@ def main():
         else:
             print 'Your admission point is '+str(ans)+' Points.'
             print pare
-    Button(master, text="Submit",command = get).grid(row=13,column=1)
-    Button(master, text="Close",command=master.destroy).grid(row=13,column=2)
+    Button(master, text="Submit",command = get).grid(row=9,column=1)
+    Button(master, text="Close",command=master.destroy).grid(row=9,column=2)
     mainloop()
 main()
