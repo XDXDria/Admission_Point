@@ -426,7 +426,7 @@ def main():
                     pare = "You are PASS! and different point is "+str(ans-point[52]) 
                 else:
                     pare = "You are NOT PASS and different point is "+str(abs(ans-point[52]))
-       
+        
         if  nlis[0] not in faculty:
             print "Invalid faculty number plese enter correct number"
         elif len(err) != 0:
@@ -434,7 +434,7 @@ def main():
         else:
             print 'Your admission point is '+str(ans)+' Points.'
             print pare
-    Button(master, text="Submit",command = get).grid(row=9,column=1)
-    Button(master, text="Close",command=master.destroy).grid(row=9,column=2)
+    Button(master, text="Submit",command = get).grid(row=13,column=1)
+    Button(master, text="Close",command=master.destroy).grid(row=13,column=2)
     mainloop()
 main()
